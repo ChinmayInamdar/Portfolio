@@ -1,0 +1,82 @@
+Project Overview
+Create a responsive, modern personal portfolio website that showcases my professional experience, skills, and projects. The website should be built with HTML, CSS, and JavaScript only (no frameworks), and optimized for deployment on Vercel.
+
+Design Requirements
+Create a clean, professional design with a modern aesthetic
+Use a color palette that is professional but distinctive (suggest 2-3 primary colors plus neutrals)
+Implement responsive design that works well on mobile, tablet, and desktop screens
+Include smooth animations and transitions for better user experience
+Optimize loading times and performance
+Site Structure
+Please create these essential pages/sections:
+
+Hero Section
+Full-width header with my name, professional title from resume
+Professional headshot photo (placeholder for now, I'll replace it later)
+Brief professional statement/tagline
+Call-to-action buttons for "View Projects" and "Contact Me"
+About Me Section
+Personal/professional summary based on my resume
+Background information on my career journey
+Professional goals and interests
+Educational background details from resume
+Skills Section
+Visual representation of technical skills from my resume (progress bars, icons, or tags)
+Group skills by category (e.g., Programming Languages, Frameworks, Tools)
+Include both hard and soft skills
+Experience Section
+Timeline or card-based layout of work experience
+For each position from my resume, include:
+Company name, location, and logo (placeholder)
+Position title and dates
+Bullet points of key responsibilities and achievements
+Technologies used at each position
+Projects Section
+Grid or card layout of notable projects
+For each project, include:
+Project title and description
+Technologies used (as tags)
+Visual preview (placeholder images)
+Links to live demo and GitHub repository (use placeholder URLs)
+Education Section
+List of educational qualifications from my resume
+Include degrees, institutions, dates, and relevant coursework
+Contact Section
+Contact form with name, email, subject, and message fields
+Social media/professional network links matching those on my resume
+Email contact option
+Footer
+Copyright information
+Navigation links
+Back to top button
+Technical Requirements
+Create pure HTML/CSS/JS implementation (no frameworks)
+Use semantic HTML5 elements
+Implement CSS custom properties for consistent styling
+Ensure the site is fully responsive using media queries
+Add JS interactivity for:
+Smooth scrolling navigation
+Form validation for the contact form
+Dynamic content loading for projects/experience sections
+Light/dark mode toggle
+Simple animations and transitions
+SEO and Performance
+Include proper meta tags and descriptions
+Implement OpenGraph tags for social sharing
+Use semantic HTML for better accessibility
+Optimize all images and assets for web
+Implement lazy loading for images
+Ensure fast loading times
+Deployment Readiness
+Organize the project with clear file structure
+Include relevant Vercel configuration (vercel.json)
+Set up proper folder structure for static assets
+Ensure all paths are relative for Vercel deployment
+Important Notes
+I'll be replacing placeholder images with actual photos later
+The content should be populated from my attached resume
+The contact form should be functional but can send to a placeholder email initially
+Make sure the page works offline (implement basic service worker)
+Include instructions for how to customize content after delivery
+Please generate this complete website in a way that makes it easy for me to update and personalize after receiving the code.
+
