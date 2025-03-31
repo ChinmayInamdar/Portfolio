@@ -158,31 +158,29 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Connect with Me</h3>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/chinmayinamdar/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-[#0A66C2] hover:bg-blue-700 flex items-center justify-center text-white transition-colors" 
+                  className="w-12 h-12 rounded-full bg-[#0A66C2] hover:bg-blue-700 flex items-center justify-center text-white transition-colors shadow-md" 
                   aria-label="LinkedIn"
                 >
                   <i className="fab fa-linkedin-in text-lg"></i>
                 </a>
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/ChinmayInamdar" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-[#24292E] hover:bg-gray-800 flex items-center justify-center text-white transition-colors" 
+                  className="w-12 h-12 rounded-full bg-[#24292E] hover:bg-gray-800 flex items-center justify-center text-white transition-colors shadow-md" 
                   aria-label="GitHub"
                 >
                   <i className="fab fa-github text-lg"></i>
                 </a>
                 <a 
-                  href="https://twitter.com" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-[#1DA1F2] hover:bg-blue-500 flex items-center justify-center text-white transition-colors" 
-                  aria-label="Twitter"
+                  href="mailto:chinmayinamdar19@gmail.com" 
+                  className="w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 flex items-center justify-center text-white transition-colors shadow-md" 
+                  aria-label="Email"
                 >
-                  <i className="fab fa-twitter text-lg"></i>
+                  <i className="fas fa-envelope text-lg"></i>
                 </a>
               </div>
             </div>

@@ -13,38 +13,9 @@ const educationData = [
   }
 ];
 
-// Additional certifications data
-const certificationData = [
-  {
-    course: 'Machine Learning Fundamentals',
-    provider: 'DeepLearning.AI via Coursera',
-    year: '2023',
-    icon: 'https://www.coursera.org/favicon.ico'
-  },
-  {
-    course: 'Python for Data Science',
-    provider: 'Udemy',
-    year: '2023',
-    icon: 'https://www.udemy.com/favicon.ico'
-  },
-  {
-    course: 'FPGA Design for Embedded Systems',
-    provider: 'Xilinx Learning Portal',
-    year: '2024',
-    icon: 'https://www.xilinx.com/favicon.ico'
-  },
-  {
-    course: 'Computer Vision with TensorFlow',
-    provider: 'Google Developers',
-    year: '2024',
-    icon: 'https://developers.google.com/favicon.ico'
-  }
-];
-
 const Education = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const educationItemsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const certificationItemsRef = useRef<(HTMLDivElement | null)[]>([]);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,16 +30,6 @@ const Education = () => {
                 item.classList.add('animate-fade-in');
                 item.style.opacity = '1';
               }, 200 + index * 200);
-            }
-          });
-          
-          // Animate certification items
-          certificationItemsRef.current.forEach((item, index) => {
-            if (item) {
-              setTimeout(() => {
-                item.classList.add('animate-fade-in');
-                item.style.opacity = '1';
-              }, 600 + index * 150);
             }
           });
           
@@ -150,29 +111,6 @@ const Education = () => {
                 </div>
               </div>
             ))}
-          </div>
-          
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold font-sans text-darkbg dark:text-white mb-6 text-center">Certifications & Additional Learning</h3>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                {certificationData.map((cert, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-start opacity-0"
-                    ref={el => certificationItemsRef.current[index] = el}
-                  >
-                    <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0 mr-3">
-                      <i className="fas fa-certificate text-primary dark:text-blue-300"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200">{cert.course}</h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{cert.provider}, {cert.year}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

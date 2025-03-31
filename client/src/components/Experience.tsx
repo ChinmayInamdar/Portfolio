@@ -1,11 +1,21 @@
 import { useEffect, useRef } from 'react';
 
+// Experience data types
+interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+  responsibilities: string[];
+  technologies: string[];
+}
+
 // Experience data
-const experienceData = [
+const experienceData: ExperienceItem[] = [
   {
     title: 'Machine Learning Intern',
-    company: 'GeoEdge',
-    logoUrl: 'https://companieslogo.com/img/orig/MLNX-465ef42c.png', // Example logo URL - replace with actual
+    company: 'Learn and Empower Pvt. Ltd',
     location: 'Remote',
     period: 'August 2024 - November 2024',
     description: 'Worked on a sign language detection and translation system, focusing on interpreting Indian Sign Language (ISL) sentences.',
@@ -18,24 +28,22 @@ const experienceData = [
     technologies: ['Python', 'TensorFlow', 'OpenCV', 'NLTK']
   },
   {
-    title: 'Research Assistant',
-    company: 'VivoCardio',
-    logoUrl: 'https://companieslogo.com/img/orig/CRSP-674af315.png', // Example logo URL - replace with actual
+    title: 'President',
+    company: 'Microsoft Learn Student Club, VIT Pune',
     location: 'Pune, India',
     period: 'July 2024 - Present',
-    description: 'Leading research initiatives in cardiovascular health monitoring systems using wearable technology.',
+    description: 'Leading a team of 75+ students in organizing and conducting technical workshops and events for the student community.',
     responsibilities: [
-      'Designing and testing wearable ECG monitoring solutions',
-      'Developing machine learning algorithms for heart anomaly detection',
-      'Collaborating with medical professionals to validate system accuracy',
-      'Documenting research findings and preparing technical reports'
+      'Organizing and conducting workshops on Git/GitHub, Web3, and TypeScript',
+      'Managing a team of 75+ student members to execute technical events',
+      'Collaborating with industry professionals for guest lectures and workshops',
+      'Developing learning roadmaps and resources for club members'
     ],
-    technologies: ['Python', 'Signal Processing', 'Machine Learning', 'Embedded Systems']
+    technologies: ['Git/GitHub', 'Web3', 'TypeScript', 'Technical Leadership']
   },
   {
     title: 'Mentor',
     company: 'Catalyst Student Mentorship Program',
-    logoUrl: '',
     location: 'Pune, India',
     period: 'April 2023 - June 2024',
     description: 'Served as a mentor teaching Android development to approximately 300+ students, focusing on building practical mobile applications.',
@@ -109,35 +117,11 @@ const Experience = () => {
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
                 <div className="flex flex-wrap justify-between items-start mb-5">
                   <div className="flex items-start">
-                    {experience.logoUrl ? (
-                      <div className="w-12 h-12 rounded-md overflow-hidden flex-shrink-0 mr-4 bg-white">
-                        <img 
-                          src={experience.logoUrl} 
-                          alt={`${experience.company} logo`} 
-                          className="w-full h-full object-contain"
-                          onError={(e) => {
-                            // Fallback if image fails to load
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = 'none';
-                            const parent = target.parentElement;
-                            if (parent) {
-                              const fallback = document.createElement('div');
-                              fallback.className = "w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-700";
-                              fallback.innerHTML = `<span className="text-gray-500 dark:text-gray-300 font-mono text-sm font-bold">
-                                ${experience.company.split(' ').map(word => word[0]).join('')}
-                              </span>`;
-                              parent.appendChild(fallback);
-                            }
-                          }}
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-md flex items-center justify-center mr-4">
-                        <span className="text-gray-600 dark:text-gray-300 font-mono text-sm font-bold">
-                          {experience.company.split(' ').map(word => word[0]).join('')}
-                        </span>
-                      </div>
-                    )}
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 dark:from-blue-700 dark:to-blue-500 rounded-md flex-shrink-0 mr-4 flex items-center justify-center text-white shadow-md">
+                      <span className="font-semibold text-xs">
+                        {experience.company.split(' ').map(word => word[0]).join('')}
+                      </span>
+                    </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">{experience.title}</h3>
                       <p className="text-gray-700 dark:text-gray-300 font-medium">{experience.company}</p>
