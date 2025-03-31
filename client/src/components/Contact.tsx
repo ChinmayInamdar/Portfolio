@@ -109,12 +109,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20 bg-gray-50 dark:bg-darkbg transition-colors duration-300 opacity-0">
+    <section id="contact" ref={sectionRef} className="py-20 bg-gray-50 dark:bg-darkbg transition-colors duration-300 animate-fade-in">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold font-sans text-darkbg dark:text-white mb-4">Get In Touch</h2>
+          <h2 className="text-3xl font-bold font-sans text-gray-900 dark:text-white mb-4">Get In Touch</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-gray-700 dark:text-gray-300">
             Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
           </p>
         </div>
@@ -129,7 +129,7 @@ const Contact = () => {
                     <i className="fas fa-envelope text-primary dark:text-blue-300"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Email</p>
                     <a href="mailto:chinmayinamdar19@gmail.com" className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors">chinmayinamdar19@gmail.com</a>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ const Contact = () => {
                     <i className="fas fa-map-marker-alt text-primary dark:text-blue-300"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Location</p>
                     <p className="text-gray-800 dark:text-gray-200">Pune, Maharashtra, India</p>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ const Contact = () => {
                     <i className="fas fa-phone-alt text-primary dark:text-blue-300"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Phone</p>
                     <a href="tel:+918485851213" className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors">+91 8485851213</a>
                   </div>
                 </div>

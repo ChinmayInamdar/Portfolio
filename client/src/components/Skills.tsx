@@ -89,12 +89,12 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-gray-50 dark:bg-darkbg transition-colors duration-300 opacity-0">
+    <section id="skills" ref={sectionRef} className="py-20 bg-gray-50 dark:bg-darkbg transition-colors duration-300 animate-fade-in">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold font-sans text-darkbg dark:text-white mb-4">Skills</h2>
+          <h2 className="text-3xl font-bold font-sans text-gray-900 dark:text-white mb-4">Skills</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-gray-700 dark:text-gray-300">
             A comprehensive overview of my technical expertise and professional capabilities.
           </p>
         </div>
@@ -102,7 +102,7 @@ const Skills = () => {
         <div className="grid gap-8 md:grid-cols-2">
           {/* Technical Skills */}
           <div>
-            <h3 className="text-2xl font-semibold font-sans text-darkbg dark:text-white mb-6">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold font-sans text-gray-900 dark:text-white mb-6">Technical Skills</h3>
             
             {/* Programming Languages */}
             <div className="mb-8">
@@ -156,7 +156,7 @@ const Skills = () => {
           
           {/* Soft Skills & Other Capabilities */}
           <div>
-            <h3 className="text-2xl font-semibold font-sans text-darkbg dark:text-white mb-6">Professional Skills</h3>
+            <h3 className="text-2xl font-semibold font-sans text-gray-900 dark:text-white mb-6">Professional Skills</h3>
             
             {/* Soft Skills */}
             <div className="mb-8">
