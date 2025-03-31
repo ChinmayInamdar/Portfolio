@@ -1,0 +1,135 @@
+# Replit Prompt: Create a Responsive Personal Portfolio Website for Chinmay Inamdar
+
+## Project Overview
+Create a responsive, modern personal portfolio website for Chinmay Inamdar that showcases his professional experience, skills, projects, and leadership roles. The website should be built with HTML, CSS, and JavaScript only (no frameworks), and optimized for deployment on Vercel.
+
+## Design Requirements
+- Create a clean, professional design with a modern aesthetic suitable for a tech professional
+- Use a color palette that reflects the tech/electronics field while remaining professional
+- Implement responsive design that works well on mobile, tablet, and desktop screens
+- Include smooth animations and transitions for better user experience
+- Optimize loading times and performance
+
+## Site Structure
+Please create these essential pages/sections:
+
+1. **Hero Section**
+   - Full-width header with "Chinmay Inamdar"
+   - Professional title: "Electronics & Telecommunications Engineering Student | Machine Learning Enthusiast"
+   - Professional headshot photo (placeholder for now, will be replaced later)
+   - Brief professional statement highlighting interests in machine learning and hardware-software co-design
+   - Call-to-action buttons for "View Projects" and "Contact Me"
+   - Links to LinkedIn and GitHub profiles
+
+2. **About Me Section**
+   - Personal/professional summary highlighting Chinmay's background in electronics, telecommunications, and machine learning
+   - Based in Pune, India
+   - Currently pursuing B.Tech at Vishwakarma Institute of Technology (2022-2026)
+   - Interest in the intersection of hardware and software development
+   - Passion for leadership and mentorship
+
+3. **Skills Section**
+   - **Languages**: C, C++, Python, VHDL, Java, SQL, Dart
+   - **Technologies**: Linux, Git, MATLAB, SQLite, TensorFlow, OpenCV
+   - **Hardware**: FPGA, Raspberry Pi
+   - **Academic Knowledge**: Operating Systems, Data Structures, Computer Networks, Linux Systems, DBMS, Object-Oriented Programming
+
+4. **Experience Section**
+   - **Machine Learning Intern** at Learn and Empower Pvt. Ltd (August 2024 – November 2024)
+     - Remote position
+     - Worked on detecting sign language and translating it to text based on sentences
+     - Developed a system to detect and interpret Indian Sign Language (ISL) sentences with SOV structure
+     - Technologies used: Python, TensorFlow, OpenCV, NLTK
+
+5. **Projects Section**
+   - **Federated GAN for Medical Images** (2024)
+     - Developed a distributed system for generating synthetic medical images while preserving data privacy
+     - Implemented training across multiple datasets using the Flower framework for improved scalability
+     - Designed preprocessing pipelines for robust image synthesis and data augmentation
+     - Technologies: Python, TensorFlow, Flower Framework
+   
+   - **GeoEdge** (2024)
+     - Developed an optimized GPS tracking system with focus on efficient data handling and storage
+     - Implemented circular buffer for memory optimization, reducing data redundancy by 40%
+     - Designed robust data persistence using SQLite for reliable operation during network outages
+     - Built real-time vehicle tracking visualization using OpenStreetMap integration
+     - Technologies: Python, SQLite, Streamlit, Raspberry Pi
+   
+   - **VivoCardio** (2024)
+     - Developed an FPGA-based system for real-time arrhythmia detection utilizing hardware-software co-design
+     - Implemented efficient QRS detection and RR interval computation achieving 96% classification accuracy
+     - Enhanced system reliability using adaptive thresholding with PD control for noise reduction
+     - Technologies: VHDL, MATLAB, Python
+
+6. **Education Section**
+   - **Vishwakarma Institute of Technology, Pune** (2022 – 2026 Expected)
+     - B.Tech - Electronics and Telecommunications Engineering
+     - CGPA: 8.1
+     - Location: Pune, Maharashtra
+
+7. **Leadership & Extracurricular Section**
+   - **Microsoft Learn Student Club, VIT Pune** (July 2024 – Present)
+     - Position: President
+     - Overseeing a team of 75+ students
+     - Organizing and conducting workshops on Git/GitHub, Web3, and TypeScript
+   
+   - **Catalyst Student Mentorship Program** (April 2023 – June 2024)
+     - Position: Mentor
+     - Taught Android development to approximately 300+ students
+
+8. **Contact Section**
+   - Contact form with name, email, subject, and message fields
+   - Email contact option: chinmayinamdar19@gmail.com
+   - Phone: +91-8485851213
+   - LinkedIn profile link
+   - GitHub profile link
+
+9. **Footer**
+   - Copyright information
+   - Navigation links
+   - Back to top button
+
+## Technical Requirements
+- Create pure HTML/CSS/JS implementation (no frameworks)
+- Use semantic HTML5 elements
+- Implement CSS custom properties for consistent styling
+- Ensure the site is fully responsive using media queries
+- Add JS interactivity for:
+  - Smooth scrolling navigation
+  - Form validation for the contact form
+  - Dynamic content loading for projects/experience sections
+  - Light/dark mode toggle
+  - Simple animations and transitions
+  - Project filtering functionality
+
+## Project Showcase Features
+- Implement a gallery/grid view for projects
+- Add the ability to filter projects by technology (Python, MATLAB, Hardware, etc.)
+- Include placeholder images that represent each project's domain:
+  - Medical imaging for Federated GAN
+  - Maps/GPS visualization for GeoEdge
+  - Heart/ECG visualization for VivoCardio
+
+## SEO and Performance
+- Include proper meta tags with keywords related to electronics, telecommunications, machine learning
+- Implement OpenGraph tags for social sharing
+- Use semantic HTML for better accessibility
+- Optimize all images and assets for web
+- Implement lazy loading for images
+- Ensure fast loading times
+
+## Deployment Readiness
+- Organize the project with clear file structure
+- Include relevant Vercel configuration (vercel.json)
+- Set up proper folder structure for static assets
+- Ensure all paths are relative for Vercel deployment
+
+## Important Notes
+- Contact links should be functional and point to Chinmay's actual email and profiles
+- Create project cards that highlight both technical details and achievements
+- Emphasize both hardware and software skills
+- Include a resume download button linking to a PDF version
+- Make sure the page works offline (implement basic service worker)
+- Include instructions for how to customize content after delivery
+
+Please generate this complete website in a way that makes it easy for Chinmay to update and personalize after receiving the code.
