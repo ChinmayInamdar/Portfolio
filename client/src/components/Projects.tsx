@@ -3,59 +3,41 @@ import { useEffect, useRef } from 'react';
 // Project data
 const projectsData = [
   {
-    title: 'E-commerce Dashboard',
-    description: 'A comprehensive dashboard for online retailers with real-time analytics, inventory management, and order processing capabilities.',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
+    title: 'Federated GAN for Medical Images',
+    description: 'Developed a distributed system for generating synthetic medical images while preserving data privacy. Implemented training across multiple datasets using the Flower framework for improved scalability.',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    technologies: ['Python', 'TensorFlow', 'Flower Framework', 'Distributed Computing'],
     featured: true,
     demoLink: '#',
     codeLink: '#'
   },
   {
-    title: 'Social Media Analytics',
-    description: 'Platform that aggregates and analyzes social media data, providing actionable insights and custom reporting capabilities.',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL', 'D3.js'],
+    title: 'GeoEdge',
+    description: 'Optimized GPS tracking system with efficient data handling and storage. Implemented circular buffer for memory optimization, reducing data redundancy by 40% and designed robust data persistence using SQLite.',
+    image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    technologies: ['Python', 'SQLite', 'Streamlit', 'Raspberry Pi', 'OpenStreetMap'],
     featured: false,
     demoLink: '#',
     codeLink: '#'
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative task management application with real-time updates, deadline tracking, and team performance analytics.',
-    image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    technologies: ['React', 'Firebase', 'Redux', 'Material UI'],
-    featured: false,
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'Fitness Tracker',
-    description: 'Mobile-first application that tracks workouts, nutrition, and provides personalized fitness recommendations.',
-    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    technologies: ['React Native', 'Node.js', 'MongoDB', 'AWS'],
-    featured: false,
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'Weather App',
-    description: 'Location-based weather forecasting application with interactive maps, historical data, and severe weather alerts.',
-    image: 'https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    technologies: ['JavaScript', 'OpenWeatherAPI', 'Leaflet.js', 'PWA'],
-    featured: false,
-    demoLink: '#',
-    codeLink: '#'
-  },
-  {
-    title: 'E-Learning Platform',
-    description: 'Online learning platform with course creation tools, interactive assessments, and student progress tracking.',
-    image: 'https://images.unsplash.com/photo-1517292987719-0369a794ec0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    technologies: ['Django', 'Python', 'PostgreSQL', 'AWS S3'],
-    featured: false,
+    title: 'VivoCardio',
+    description: 'FPGA-based system for real-time arrhythmia detection utilizing hardware-software co-design. Implemented efficient QRS detection and RR interval computation achieving 96% classification accuracy.',
+    image: 'https://images.unsplash.com/photo-1559757175-7cb036e0159b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    technologies: ['VHDL', 'MATLAB', 'Python', 'FPGA', 'ECG Analysis'],
+    featured: true,
     demoLink: '#',
     codeLink: '#'
   }
+];
+
+// Filter categories for projects
+const categories = [
+  'All',
+  'Python',
+  'Hardware',
+  'Machine Learning',
+  'FPGA'
 ];
 
 const Projects = () => {
@@ -101,11 +83,27 @@ const Projects = () => {
     <section id="projects" ref={sectionRef} className="py-20 bg-gray-50 dark:bg-darkbg transition-colors duration-300 opacity-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold font-sans text-darkbg dark:text-white mb-4">Portfolio Projects</h2>
+          <h2 className="text-3xl font-bold font-sans text-darkbg dark:text-white mb-4">Technical Projects</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300">
-            Explore a selection of my most significant projects and technical accomplishments.
+            Explore a selection of my most significant projects spanning hardware, software, and machine learning domains.
           </p>
+        </div>
+        
+        {/* Project Filter Categories */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              className={`px-4 py-2 rounded-full text-sm font-medium ${
+                index === 0 
+                  ? 'bg-primary text-white' 
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+              } transition-colors`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -145,7 +143,7 @@ const Projects = () => {
                     href={project.demoLink} 
                     className="px-3 py-2 bg-primary hover:bg-blue-600 text-white text-sm rounded-lg transition-colors"
                   >
-                    <i className="fas fa-globe mr-1"></i> Live Demo
+                    <i className="fas fa-globe mr-1"></i> Project Details
                   </a>
                   <a 
                     href={project.codeLink} 
@@ -166,7 +164,7 @@ const Projects = () => {
             rel="noopener noreferrer" 
             className="inline-flex items-center px-5 py-3 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg shadow-md transition-colors"
           >
-            <i className="fab fa-github mr-2"></i> See More Projects on GitHub
+            <i className="fab fa-github mr-2"></i> Explore More Projects on GitHub
           </a>
         </div>
       </div>

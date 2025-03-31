@@ -130,7 +130,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                    <a href="mailto:contact@example.com" className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors">contact@example.com</a>
+                    <a href="mailto:chinmayinamdar19@gmail.com" className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors">chinmayinamdar19@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -139,7 +139,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
-                    <p className="text-gray-800 dark:text-gray-200">San Francisco, California</p>
+                    <p className="text-gray-800 dark:text-gray-200">Pune, Maharashtra, India</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -148,7 +148,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-                    <a href="tel:+11234567890" className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors">(123) 456-7890</a>
+                    <a href="tel:+918485851213" className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors">+91 8485851213</a>
                   </div>
                 </div>
               </div>
@@ -158,46 +158,31 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Connect with Me</h3>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="#" 
-                  className="w-12 h-12 rounded-full bg-[#1877F2] hover:bg-blue-600 flex items-center justify-center text-white transition-colors" 
-                  aria-label="Facebook"
-                >
-                  <i className="fab fa-facebook-f text-lg"></i>
-                </a>
-                <a 
-                  href="#" 
-                  className="w-12 h-12 rounded-full bg-[#1DA1F2] hover:bg-blue-500 flex items-center justify-center text-white transition-colors" 
-                  aria-label="Twitter"
-                >
-                  <i className="fab fa-twitter text-lg"></i>
-                </a>
-                <a 
-                  href="#" 
+                  href="https://linkedin.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-[#0A66C2] hover:bg-blue-700 flex items-center justify-center text-white transition-colors" 
                   aria-label="LinkedIn"
                 >
                   <i className="fab fa-linkedin-in text-lg"></i>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://github.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-[#24292E] hover:bg-gray-800 flex items-center justify-center text-white transition-colors" 
                   aria-label="GitHub"
                 >
                   <i className="fab fa-github text-lg"></i>
                 </a>
                 <a 
-                  href="#" 
-                  className="w-12 h-12 rounded-full bg-[#EA4C89] hover:bg-pink-600 flex items-center justify-center text-white transition-colors" 
-                  aria-label="Dribbble"
+                  href="https://twitter.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-[#1DA1F2] hover:bg-blue-500 flex items-center justify-center text-white transition-colors" 
+                  aria-label="Twitter"
                 >
-                  <i className="fab fa-dribbble text-lg"></i>
-                </a>
-                <a 
-                  href="#" 
-                  className="w-12 h-12 rounded-full bg-[#FF0000] hover:bg-red-600 flex items-center justify-center text-white transition-colors" 
-                  aria-label="YouTube"
-                >
-                  <i className="fab fa-youtube text-lg"></i>
+                  <i className="fab fa-twitter text-lg"></i>
                 </a>
               </div>
             </div>

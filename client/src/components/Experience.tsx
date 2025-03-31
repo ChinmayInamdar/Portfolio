@@ -3,43 +3,46 @@ import { useEffect, useRef } from 'react';
 // Experience data
 const experienceData = [
   {
-    title: 'Senior Software Engineer',
-    company: 'TechCorp Solutions',
-    location: 'San Francisco, CA',
-    period: '2020 - Present',
-    description: 'Led development of cloud-based enterprise solutions, improving system performance by 40% and implementing CI/CD pipelines that reduced deployment time by 65%.',
+    title: 'Machine Learning Intern',
+    company: 'Learn and Empower Pvt. Ltd',
+    location: 'Remote',
+    period: 'August 2024 - November 2024',
+    description: 'Worked on a sign language detection and translation system, focusing on interpreting Indian Sign Language (ISL) sentences.',
     responsibilities: [
-      'Architected and implemented scalable microservices using Node.js and Express',
-      'Led a team of 5 developers, providing technical mentorship and code reviews',
-      'Redesigned authentication system improving security and reducing login failures by 90%'
+      'Developed a system to detect and interpret Indian Sign Language (ISL) sentences with SOV structure',
+      'Implemented computer vision algorithms for real-time hand gesture recognition',
+      'Optimized model performance for efficient real-time sign language detection',
+      'Integrated natural language processing for translation of sign language to text'
     ],
-    technologies: ['React', 'Node.js', 'AWS', 'MongoDB', 'Docker', 'GraphQL']
+    technologies: ['Python', 'TensorFlow', 'OpenCV', 'NLTK']
   },
   {
-    title: 'Full-Stack Developer',
-    company: 'InnovateSoft Inc.',
-    location: 'Seattle, WA',
-    period: '2018 - 2020',
-    description: 'Developed responsive web applications for clients across various industries, resulting in a 35% increase in user engagement and a 25% decrease in bounce rates.',
+    title: 'President',
+    company: 'Microsoft Learn Student Club, VIT Pune',
+    location: 'Pune, India',
+    period: 'July 2024 - Present',
+    description: 'Leading a team of 75+ students in organizing and conducting technical workshops and events for the student community.',
     responsibilities: [
-      'Built and maintained client websites using React, Vue.js, and vanilla JavaScript',
-      'Implemented RESTful APIs and database schemas for web applications',
-      'Collaborated with UI/UX designers to implement responsive, accessible interfaces'
+      'Organizing and conducting workshops on Git/GitHub, Web3, and TypeScript',
+      'Managing a team of 75+ student members to execute technical events',
+      'Collaborating with industry professionals for guest lectures and workshops',
+      'Developing learning roadmaps and resources for club members'
     ],
-    technologies: ['JavaScript', 'Vue.js', 'Express', 'PostgreSQL', 'SASS']
+    technologies: ['Git/GitHub', 'Web3', 'TypeScript', 'Technical Leadership']
   },
   {
-    title: 'Front-End Developer',
-    company: 'Digital Media Labs',
-    location: 'Austin, TX',
-    period: '2016 - 2018',
-    description: 'Started as a junior developer and quickly advanced to take on more complex projects, focusing on creating responsive, accessible web interfaces.',
+    title: 'Mentor',
+    company: 'Catalyst Student Mentorship Program',
+    location: 'Pune, India',
+    period: 'April 2023 - June 2024',
+    description: 'Served as a mentor teaching Android development to approximately 300+ students, focusing on building practical mobile applications.',
     responsibilities: [
-      'Developed and maintained client websites using HTML, CSS, and JavaScript',
-      'Optimized website performance, reducing load times by 40%',
-      'Implemented responsive designs ensuring cross-browser compatibility'
+      'Created and delivered comprehensive Android development curriculum',
+      'Provided one-on-one and group mentoring sessions to solve technical challenges',
+      'Guided students through the development of real-world Android applications',
+      'Conducted code reviews and helped students implement best practices'
     ],
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Bootstrap']
+    technologies: ['Android', 'Java', 'Kotlin', 'Mobile Development', 'Technical Teaching']
   }
 ];
 
@@ -84,10 +87,10 @@ const Experience = () => {
     <section id="experience" ref={sectionRef} className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 opacity-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold font-sans text-darkbg dark:text-white mb-4">Professional Experience</h2>
+          <h2 className="text-3xl font-bold font-sans text-darkbg dark:text-white mb-4">Professional Experience & Leadership</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300">
-            A chronological overview of my professional journey and accomplishments.
+            A chronological overview of my professional journey, leadership roles, and accomplishments.
           </p>
         </div>
         

@@ -15,23 +15,24 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-6 md:mb-0">
             <h2 className="text-xl font-bold text-primary mb-2 font-sans">
-              John Doe
+              Chinmay Inamdar
             </h2>
             <p className="text-gray-600 dark:text-gray-400">
-              Software Developer • Problem Solver • Tech Enthusiast
+              Electronics & Telecommunications Engineering Student • Machine Learning Enthusiast • Hardware-Software Co-design
             </p>
           </div>
           
           <div className="flex flex-col items-center md:items-end">
-            <nav className="flex gap-6 text-sm mb-4">
+            <nav className="flex flex-wrap gap-6 text-sm mb-4 justify-center md:justify-end">
               <a href="#about" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">About</a>
               <a href="#skills" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
               <a href="#experience" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Experience</a>
               <a href="#projects" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Projects</a>
+              <a href="#education" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Education</a>
               <a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
             </nav>
             <p className="text-gray-500 dark:text-gray-500 text-sm">
-              &copy; {currentYear} Portfolio. All rights reserved.
+              &copy; {currentYear} Chinmay Inamdar. All rights reserved.
             </p>
           </div>
         </div>

@@ -1,109 +1,120 @@
-// This file contains JavaScript utilities and functions for the portfolio
-// The main functionality is now handled by the React components
-
-// Helper functions that can be used across components
+/**
+ * Scrolls to the element with the given ID
+ * @param {string} elementId - The ID of the element to scroll to
+ * @returns {void}
+ */
 export const scrollToElement = (elementId) => {
   const element = document.getElementById(elementId);
   if (element) {
-    const headerHeight = 64; // Height of fixed header
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-    
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
+    element.scrollIntoView({ behavior: 'smooth' });
   }
 };
 
-// Email validation
+/**
+ * Validates an email address
+ * @param {string} email - The email to validate
+ * @returns {boolean} - Whether the email is valid
+ */
 export const isValidEmail = (email) => {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailPattern.test(email);
+  const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(String(email).toLowerCase());
 };
 
-// Form validation
+/**
+ * Validates form data
+ * @param {Object} formData - The form data to validate
+ * @returns {Object} - Validation result with isValid flag and errors object
+ */
 export const validateForm = (formData) => {
   const errors = {};
-  
-  // Name validation
-  if (!formData.name || formData.name.trim() === '') {
+
+  if (!formData.name.trim()) {
     errors.name = 'Name is required';
   }
-  
-  // Email validation
-  if (!formData.email || formData.email.trim() === '') {
+
+  if (!formData.email.trim()) {
     errors.email = 'Email is required';
   } else if (!isValidEmail(formData.email)) {
     errors.email = 'Please enter a valid email address';
   }
-  
-  // Subject validation
-  if (!formData.subject || formData.subject.trim() === '') {
+
+  if (!formData.subject.trim()) {
     errors.subject = 'Subject is required';
   }
-  
-  // Message validation
-  if (!formData.message || formData.message.trim() === '') {
+
+  if (!formData.message.trim()) {
     errors.message = 'Message is required';
+  } else if (formData.message.trim().length < 10) {
+    errors.message = 'Message must be at least 10 characters';
   }
-  
+
   return {
     isValid: Object.keys(errors).length === 0,
     errors
   };
 };
 
-// Handle form submission
+/**
+ * Handles form submission
+ * @param {Object} formData - The form data to submit
+ * @returns {Promise<Object>} - Result object with success flag and message
+ */
 export const handleFormSubmission = async (formData) => {
   try {
-    // In a real application, this would send the form data to a server
-    // For now, we'll just simulate a successful submission
+    // In a real application, this would be an API call
+    console.log('Submitting form:', formData);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
     return {
       success: true,
-      message: 'Thank you for your message! I will get back to you soon.'
+      message: 'Your message has been sent successfully!'
     };
   } catch (error) {
+    console.error('Error submitting form:', error);
     return {
       success: false,
-      message: 'There was an error sending your message. Please try again.'
+      message: 'Failed to send your message. Please try again later.'
     };
   }
 };
 
-// Dynamic loading for content sections
+/**
+ * Lazy loads images for better performance
+ */
 export const lazyLoadImages = () => {
   if ('IntersectionObserver' in window) {
-    const imgObserver = new IntersectionObserver((entries, observer) => {
+    const lazyImages = document.querySelectorAll('[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const img = entry.target;
-          const src = img.getAttribute('data-src');
-          if (src) {
-            img.setAttribute('src', src);
-            img.classList.remove('lazy');
-            observer.unobserve(img);
-          }
+          const image = entry.target;
+          image.src = image.dataset.src;
+          image.removeAttribute('data-src');
+          imageObserver.unobserve(image);
         }
       });
     });
-
-    document.querySelectorAll('img.lazy').forEach(img => {
-      imgObserver.observe(img);
+    
+    lazyImages.forEach(image => {
+      imageObserver.observe(image);
     });
   } else {
-    // Fallback for browsers without intersection observer support
-    document.querySelectorAll('img.lazy').forEach(img => {
-      const src = img.getAttribute('data-src');
-      if (src) {
-        img.setAttribute('src', src);
-        img.classList.remove('lazy');
-      }
+    // Fallback for browsers that don't support IntersectionObserver
+    const lazyImages = document.querySelectorAll('[data-src]');
+    lazyImages.forEach(image => {
+      image.src = image.dataset.src;
+      image.removeAttribute('data-src');
     });
   }
 };
 
-// Helper to get current year
+/**
+ * Returns the current year
+ * @returns {number} - The current year
+ */
 export const getCurrentYear = () => {
   return new Date().getFullYear();
 };

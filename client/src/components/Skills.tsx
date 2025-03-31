@@ -2,50 +2,50 @@ import { useEffect, useRef } from 'react';
 
 // Programming language skill data
 const programmingSkills = [
-  { name: 'JavaScript', level: 95 },
-  { name: 'HTML/CSS', level: 90 },
-  { name: 'Python', level: 85 },
-  { name: 'TypeScript', level: 80 }
+  { name: 'Python', level: 90 },
+  { name: 'C/C++', level: 85 },
+  { name: 'Java', level: 80 },
+  { name: 'VHDL', level: 75 }
 ];
 
-// Frameworks & libraries data
-const frameworkSkills = [
-  'React', 'Node.js', 'Express', 'Vue.js', 
-  'Django', 'Redux', 'jQuery', 'TailwindCSS'
+// Technologies data
+const technologiesSkills = [
+  'TensorFlow', 'OpenCV', 'MATLAB', 'Git',
+  'SQLite', 'Linux', 'Raspberry Pi', 'FPGA'
 ];
 
-// Tools & technologies data
-const toolSkills = [
-  'Git/GitHub', 'Docker', 'AWS', 'MongoDB',
-  'PostgreSQL', 'Webpack', 'CI/CD', 'RESTful APIs'
+// Academic knowledge data
+const academicSkills = [
+  'Operating Systems', 'Data Structures', 'Computer Networks',
+  'Linux Systems', 'DBMS', 'Object-Oriented Programming'
 ];
 
 // Professional skills data
 const professionalSkills = [
   {
     name: 'Problem Solving',
-    description: 'Analytical approach to diagnose issues and develop effective solutions.'
+    description: 'Analytical approach to diagnose issues and develop innovative solutions.'
   },
   {
-    name: 'Communication',
-    description: 'Clear and concise communication with clients and team members.'
+    name: 'Leadership',
+    description: 'Experience leading teams and organizing technical workshops and events.'
   },
   {
     name: 'Team Collaboration',
-    description: 'Experience working in agile teams with diverse skill sets.'
+    description: 'Effective team player with experience in cross-functional project environments.'
   },
   {
-    name: 'Adaptability',
-    description: 'Quick to learn new technologies and adjust to changing requirements.'
+    name: 'Mentorship',
+    description: 'Dedicated to teaching and guiding others in technical learning journeys.'
   }
 ];
 
 // Additional skills data
 const additionalSkills = [
-  { name: 'Project Management', level: 85 },
-  { name: 'UI/UX Design', level: 80 },
-  { name: 'SEO & Analytics', level: 75 },
-  { name: 'Performance Optimization', level: 90 }
+  { name: 'Hardware-Software Co-design', level: 85 },
+  { name: 'Embedded Systems', level: 80 },
+  { name: 'Machine Learning', level: 90 },
+  { name: 'Signal Processing', level: 75 }
 ];
 
 const Skills = () => {
@@ -125,11 +125,11 @@ const Skills = () => {
               ))}
             </div>
             
-            {/* Frameworks & Libraries */}
+            {/* Technologies */}
             <div className="mb-8">
-              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Frameworks & Libraries</h4>
+              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Technologies & Tools</h4>
               <div className="flex flex-wrap gap-3">
-                {frameworkSkills.map(skill => (
+                {technologiesSkills.map(skill => (
                   <span 
                     key={skill} 
                     className="px-3 py-2 bg-white dark:bg-gray-800 text-primary dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900"
@@ -140,11 +140,11 @@ const Skills = () => {
               </div>
             </div>
             
-            {/* Tools & Technologies */}
+            {/* Academic Knowledge */}
             <div>
-              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Tools & Technologies</h4>
+              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Academic Knowledge</h4>
               <div className="grid grid-cols-2 gap-4">
-                {toolSkills.map(skill => (
+                {academicSkills.map(skill => (
                   <div className="flex items-center" key={skill}>
                     <i className="fas fa-check text-green-500 mr-2"></i>
                     <span className="text-gray-700 dark:text-gray-300">{skill}</span>
@@ -160,7 +160,7 @@ const Skills = () => {
             
             {/* Soft Skills */}
             <div className="mb-8">
-              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Soft Skills</h4>
+              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Leadership & Collaboration</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {professionalSkills.map(skill => (
                   <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm" key={skill.name}>
@@ -173,7 +173,7 @@ const Skills = () => {
             
             {/* Additional Skills */}
             <div>
-              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Additional Capabilities</h4>
+              <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Specialized Knowledge</h4>
               {additionalSkills.map((skill, index) => (
                 <div className="mb-5" key={skill.name}>
                   <div className="flex justify-between mb-1">

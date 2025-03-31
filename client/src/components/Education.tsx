@@ -3,53 +3,48 @@ import { useEffect, useRef } from 'react';
 // Education data
 const educationData = [
   {
-    degree: 'Bachelor of Science',
-    field: 'Computer Science',
-    institution: 'University of Technology',
-    period: '2012-2016',
-    courses: ['Data Structures', 'Algorithms', 'Database Systems', 'Web Development', 'Operating Systems', 'Software Engineering']
-  },
-  {
-    degree: 'Professional Certification',
-    field: 'Full-Stack Web Development',
-    institution: 'Tech Academy',
-    period: '2017',
-    courses: ['Front-End Development', 'Back-End Systems', 'RESTful APIs', 'Database Design']
+    degree: 'Bachelor of Technology',
+    field: 'Electronics and Telecommunications Engineering',
+    institution: 'Vishwakarma Institute of Technology',
+    location: 'Pune, Maharashtra',
+    period: '2022-2026 (Expected)',
+    gpa: '8.1',
+    courses: ['Digital Signal Processing', 'Embedded Systems', 'Communication Networks', 'Microprocessors', 'Operating Systems', 'Data Structures']
   }
 ];
 
-// Continuing education data
-const continuingEducation = [
+// Additional certifications data
+const certificationData = [
   {
-    course: 'Machine Learning Specialization',
-    provider: 'Stanford University via Coursera',
-    year: '2019',
+    course: 'Machine Learning Fundamentals',
+    provider: 'DeepLearning.AI via Coursera',
+    year: '2023',
     icon: 'https://www.coursera.org/favicon.ico'
   },
   {
-    course: 'Advanced React and Redux',
+    course: 'Python for Data Science',
     provider: 'Udemy',
-    year: '2020',
+    year: '2023',
     icon: 'https://www.udemy.com/favicon.ico'
   },
   {
-    course: 'Cloud Architecture with AWS',
-    provider: 'LinkedIn Learning',
-    year: '2021',
-    icon: 'https://www.linkedin.com/favicon.ico'
+    course: 'FPGA Design for Embedded Systems',
+    provider: 'Xilinx Learning Portal',
+    year: '2024',
+    icon: 'https://www.xilinx.com/favicon.ico'
   },
   {
-    course: 'Microservices Architecture',
-    provider: 'Pluralsight',
-    year: '2022',
-    icon: 'https://pluralsight.imgix.net/favicon.ico'
+    course: 'Computer Vision with TensorFlow',
+    provider: 'Google Developers',
+    year: '2024',
+    icon: 'https://developers.google.com/favicon.ico'
   }
 ];
 
 const Education = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const educationItemsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const continuingEdItemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const certificationItemsRef = useRef<(HTMLDivElement | null)[]>([]);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -67,8 +62,8 @@ const Education = () => {
             }
           });
           
-          // Animate continuing education items
-          continuingEdItemsRef.current.forEach((item, index) => {
+          // Animate certification items
+          certificationItemsRef.current.forEach((item, index) => {
             if (item) {
               setTimeout(() => {
                 item.classList.add('animate-fade-in');
@@ -101,61 +96,78 @@ const Education = () => {
           <h2 className="text-3xl font-bold font-sans text-darkbg dark:text-white mb-4">Education</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300">
-            My academic background and continuous learning endeavors.
+            My academic background and continuous learning journey.
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8">
             {educationData.map((education, index) => (
               <div 
                 key={index} 
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 opacity-0"
                 ref={el => educationItemsRef.current[index] = el}
               >
-                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+                <div className="flex flex-col md:flex-row items-start gap-4 mb-4">
                   <div className="flex-shrink-0 w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                    <i className={`fas ${index === 0 ? 'fa-graduation-cap' : 'fa-certificate'} text-primary dark:text-blue-300 text-2xl`}></i>
+                    <i className="fas fa-graduation-cap text-primary dark:text-blue-300 text-2xl"></i>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{education.degree}</h3>
-                    <p className="text-gray-700 dark:text-gray-300">{education.field}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{education.institution}, {education.period}</p>
+                  <div className="flex-grow">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start">
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{education.degree}</h3>
+                        <p className="text-gray-700 dark:text-gray-300">{education.field}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">{education.institution}, {education.location}</p>
+                      </div>
+                      <div className="mt-2 md:mt-0 md:text-right">
+                        <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
+                          {education.period}
+                        </div>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">CGPA: {education.gpa}</p>
+                      </div>
+                    </div>
+                    <div className="mt-4">
+                      <h4 className="text-md font-medium text-gray-800 dark:text-gray-200 mb-2">
+                        Key Courses:
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {education.courses.map(course => (
+                          <span 
+                            key={course} 
+                            className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded text-sm"
+                          >
+                            {course}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <h4 className="text-md font-medium text-gray-800 dark:text-gray-200 mb-2">
-                    {index === 0 ? 'Key Courses:' : 'Focus Areas:'}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {education.courses.map(course => (
-                      <span 
-                        key={course} 
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded text-sm"
-                      >
-                        {course}
-                      </span>
-                    ))}
-                  </div>
+                <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Currently focusing on the intersection of embedded systems, signal processing, and machine learning applications.
+                  </p>
                 </div>
               </div>
             ))}
           </div>
           
           <div className="mt-12">
-            <h3 className="text-2xl font-semibold font-sans text-darkbg dark:text-white mb-6 text-center">Continuing Education</h3>
+            <h3 className="text-2xl font-semibold font-sans text-darkbg dark:text-white mb-6 text-center">Certifications & Additional Learning</h3>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
               <div className="grid md:grid-cols-2 gap-6">
-                {continuingEducation.map((course, index) => (
+                {certificationData.map((cert, index) => (
                   <div 
                     key={index} 
                     className="flex items-start opacity-0"
-                    ref={el => continuingEdItemsRef.current[index] = el}
+                    ref={el => certificationItemsRef.current[index] = el}
                   >
-                    <img src={course.icon} alt={course.provider} className="w-8 h-8 mt-1 mr-3" />
+                    <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0 mr-3">
+                      <i className="fas fa-certificate text-primary dark:text-blue-300"></i>
+                    </div>
                     <div>
-                      <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200">{course.course}</h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{course.provider}, {course.year}</p>
+                      <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200">{cert.course}</h4>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{cert.provider}, {cert.year}</p>
                     </div>
                   </div>
                 ))}

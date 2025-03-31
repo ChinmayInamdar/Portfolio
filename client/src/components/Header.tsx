@@ -31,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a href="#hero" className="text-xl font-bold text-primary">
-            <span className="font-sans">Portfolio</span>
+            <span className="font-sans">Chinmay Inamdar</span>
           </a>
           
           <div className="md:hidden">
