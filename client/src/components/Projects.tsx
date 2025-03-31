@@ -5,29 +5,32 @@ const projectsData = [
   {
     title: 'Federated GAN for Medical Images',
     description: 'Developed a distributed system for generating synthetic medical images while preserving data privacy. Implemented training across multiple datasets using the Flower framework for improved scalability.',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    bgColor: 'from-blue-500 to-blue-700',
+    icon: 'fa-brain',
     technologies: ['Python', 'TensorFlow', 'Flower Framework', 'Distributed Computing'],
     featured: true,
     demoLink: '#',
-    codeLink: '#'
+    codeLink: 'https://github.com/ChinmayInamdar'
   },
   {
-    title: 'GeoEdge',
+    title: 'Smart GPS Tracking System',
     description: 'Optimized GPS tracking system with efficient data handling and storage. Implemented circular buffer for memory optimization, reducing data redundancy by 40% and designed robust data persistence using SQLite.',
-    image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    bgColor: 'from-green-500 to-green-700',
+    icon: 'fa-map-marker-alt',
     technologies: ['Python', 'SQLite', 'Streamlit', 'Raspberry Pi', 'OpenStreetMap'],
     featured: false,
     demoLink: '#',
-    codeLink: '#'
+    codeLink: 'https://github.com/ChinmayInamdar'
   },
   {
-    title: 'VivoCardio',
+    title: 'ECG Arrhythmia Detection',
     description: 'FPGA-based system for real-time arrhythmia detection utilizing hardware-software co-design. Implemented efficient QRS detection and RR interval computation achieving 96% classification accuracy.',
-    image: 'https://images.unsplash.com/photo-1559757175-7cb036e0159b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    bgColor: 'from-red-500 to-red-700',
+    icon: 'fa-heartbeat',
     technologies: ['VHDL', 'MATLAB', 'Python', 'FPGA', 'ECG Analysis'],
     featured: true,
     demoLink: '#',
-    codeLink: '#'
+    codeLink: 'https://github.com/ChinmayInamdar'
   }
 ];
 
@@ -113,16 +116,11 @@ const Projects = () => {
               className="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all opacity-0 translate-y-8"
               ref={el => projectCardsRef.current[index] = el}
             >
-              <div className="h-48 overflow-hidden relative">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+              <div className={`h-48 overflow-hidden relative bg-gradient-to-br ${project.bgColor} flex items-center justify-center`}>
+                <i className={`fas ${project.icon} text-white text-5xl opacity-90`}></i>
                 {project.featured && (
                   <div className="absolute top-3 right-3">
-                    <span className="px-2 py-1 bg-blue-500 text-white text-xs rounded-md">Featured</span>
+                    <span className="px-2 py-1 bg-white text-gray-800 dark:bg-gray-800 dark:text-white text-xs font-semibold rounded-md shadow-sm">Featured</span>
                   </div>
                 )}
               </div>
@@ -159,7 +157,7 @@ const Projects = () => {
         
         <div className="text-center mt-12">
           <a 
-            href="https://github.com" 
+            href="https://github.com/ChinmayInamdar" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-flex items-center px-5 py-3 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg shadow-md transition-colors"
